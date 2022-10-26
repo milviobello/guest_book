@@ -1,0 +1,27 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./my-guest-book.js"></script>
+</head>
+<body>
+    <div style="text-align:center">
+        <h2>My Guest Book App</h2>
+        <div>
+            <h3>New Post</h3>
+            <textarea id="msg" cols="50" rows="3"></textarea>
+            <br />
+            <button id="postMessageButton" onclick="postMessage();">Post</button>
+        </div>
+        <div>
+            <h3>Existing Posts</h3>
+            <nobr>
+                Posted After <input id="postedAfter" value="2020-01-01T00:00:00.000Z">
+                <button id="postedAfterButton" onclick="getPostsAfter($('#postedAfter').val());">Filter</button>
+            </nobr>
+            <div id="entries">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
